@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import aboutImage from '../assets/about__image-wrapper.png';
 
 const About = () => {
   const containerVariants = {
@@ -106,7 +107,7 @@ const About = () => {
           >
             <div className="about__image-wrapper">
               <img
-                src="/src/assets/about__image-wrapper.png"
+                src={aboutImage}
                 alt="About CDSJourney"
                 className="about__image"
               />
