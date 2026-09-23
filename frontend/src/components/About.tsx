@@ -1,4 +1,3 @@
-import { SectionHeading } from './ui/SectionHeading';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ const About = () => {
         staggerChildren: 0.2
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -19,12 +18,12 @@ const About = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 12
       }
     }
-  };
+  } as const;
 
   const features = [
     {

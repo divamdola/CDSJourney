@@ -2,7 +2,7 @@ import { timelineEvents, TimelineEvent } from '../data/timeline';
 import { useEffect, useState, useRef } from 'react';
 
 const getIconSVG = (iconName?: string) => {
-  const icons: Record<string, JSX.Element> = {
+  const icons: Record<string, React.ReactElement> = {
     'flag': (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
@@ -91,13 +91,12 @@ const getIconSVG = (iconName?: string) => {
 
 interface TimelineCardProps {
   event: TimelineEvent;
-  index: number;
   isLeft: boolean;
   isVisible: boolean;
   isActive: boolean;
 }
 
-const TimelineCard = ({ event, index, isLeft, isVisible, isActive }: TimelineCardProps) => {
+const TimelineCard = ({ event, isLeft, isVisible, isActive }: TimelineCardProps) => {
   return (
     <div 
       className={`timeline__card ${event.highlight ? 'timeline__card--highlight' : ''} ${isActive ? 'timeline__card--active' : ''}`}
@@ -182,7 +181,7 @@ const TimelineItem = ({ event, index, isVisible, isActive }: { event: TimelineEv
   
   return (
     <div className={`timeline__item ${isLeft ? 'timeline__item--left' : 'timeline__item--right'}`}>
-      <TimelineCard event={event} index={index} isLeft={isLeft} isVisible={isVisible} isActive={isActive} />
+      <TimelineCard event={event} isLeft={isLeft} isVisible={isVisible} isActive={isActive} />
       <TimelineMarker icon={event.icon} highlight={event.highlight} isActive={isActive} />
     </div>
   );
@@ -310,7 +309,7 @@ const Timeline = () => {
             {timelineEvents.map((event, index) => (
               <div
                 key={`${event.year}-${index}`}
-                ref={(el) => (itemRefs.current[index] = el)}
+                ref={(el: HTMLDivElement | null) => { if (el) itemRefs.current[index] = el; }}
                 data-index={index}
                 className="timeline__item-wrapper"
               >

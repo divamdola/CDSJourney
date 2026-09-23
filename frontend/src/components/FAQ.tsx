@@ -50,7 +50,7 @@ const FAQ = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -58,12 +58,12 @@ const FAQ = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 12
       }
     }
-  };
+  } as const;
 
   return (
     <section className="faq">

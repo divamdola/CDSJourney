@@ -58,7 +58,7 @@ const Features = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -66,12 +66,12 @@ const Features = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 12
       }
     }
-  };
+  } as const;
 
   return (
     <section className="features">

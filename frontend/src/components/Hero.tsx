@@ -11,7 +11,7 @@ const Hero = () => {
         delayChildren: 0.2
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -19,12 +19,12 @@ const Hero = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 12
       }
     }
-  };
+  } as const;
 
   const visualVariants = {
     hidden: { opacity: 0, scale: 0.95 },
@@ -34,10 +34,10 @@ const Hero = () => {
       transition: {
         delay: 0.4,
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.25, 0.1, 0.25, 1] as const
       }
     }
-  };
+  } as const;
 
   const floatVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -46,12 +46,12 @@ const Hero = () => {
       y: 0,
       transition: {
         delay: 0.6 + (i * 0.1),
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 200,
         damping: 15
       }
     })
-  };
+  } as const;
 
   const decorativeVariants = {
     hidden: { opacity: 0, scale: 0 },
@@ -61,10 +61,10 @@ const Hero = () => {
       transition: {
         delay: 0.8,
         duration: 1,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.25, 0.1, 0.25, 1] as const
       }
     }
-  };
+  } as const;
 
   return (
     <section className="hero">

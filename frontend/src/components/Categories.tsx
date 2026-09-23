@@ -48,7 +48,7 @@ const Categories = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -56,12 +56,12 @@ const Categories = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 100,
         damping: 12
       }
     }
-  };
+  } as const;
 
   return (
     <section className="categories">

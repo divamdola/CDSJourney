@@ -34,7 +34,7 @@ const Navbar = () => {
       opacity: 0,
       x: '100%',
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 300,
         damping: 30
       }
@@ -43,12 +43,12 @@ const Navbar = () => {
       opacity: 1,
       x: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 300,
         damping: 30
       }
     }
-  };
+  } as const;
 
   const linkVariants = {
     closed: { opacity: 0, x: 20 },
@@ -57,12 +57,12 @@ const Navbar = () => {
       x: 0,
       transition: {
         delay: i * 0.05,
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 300,
         damping: 24
       }
     })
-  };
+  } as const;
 
   return (
     <motion.nav
