@@ -6,26 +6,30 @@ export interface Mentor {
   expertise: string;
 }
 
+import anuragImage from '../assets/anurag sir.png';
+import brarImage from '../assets/brar sir.png';
+import poojaImage from '../assets/Pooja maam.png';
+
 export const mentors: Mentor[] = [
   {
     id: '1',
     name: 'Anurag Tripathi',
     displayName: 'Anurag Sir',
-    image: '/src/assets/anurag sir.png',
+    image: anuragImage,
     expertise: 'General Studies'
   },
   {
     id: '2',
     name: 'Sandeep Singh Brar',
     displayName: 'Brar Sir',
-    image: '/src/assets/brar sir.png',
+    image: brarImage,
     expertise: 'Mathematics'
   },
   {
     id: '3',
     name: 'Pooja Maam',
     displayName: 'Pooja Maam',
-    image: '/src/assets/Pooja maam.png',
+    image: poojaImage,
     expertise: 'English and Vocabulary'
   }
 ];
