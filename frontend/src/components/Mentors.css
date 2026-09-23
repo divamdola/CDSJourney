@@ -1,0 +1,129 @@
+.mentors {
+  padding: var(--space-5xl) 0;
+  background: #f8f9fa;
+}
+
+.mentors__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.mentor-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-base);
+}
+
+.mentor-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+.mentor-card__image-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.mentor-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.mentor-card:hover .mentor-card__image {
+  transform: scale(1.1);
+}
+
+.mentor-card__content {
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.mentor-card__role {
+  font-size: var(--font-size-label);
+  color: #667eea;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+.mentor-card__name {
+  font-size: var(--font-size-heading-lg);
+  font-weight: 700;
+  color: #333;
+  margin-bottom: var(--space-lg);
+}
+
+.mentor-card__cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 28px;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-body-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.mentor-card__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+}
+
+.mentors__cta {
+  text-align: center;
+  margin-top: var(--space-3xl);
+}
+
+.btn--outline {
+  display: inline-block;
+  background: transparent;
+  color: #667eea;
+  padding: 16px 40px;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-body-md);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #667eea;
+  transition: all var(--transition-base);
+}
+
+.btn--outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .mentors__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .mentor-card__image-wrapper {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mentors {
+    padding: var(--space-3xl) 0;
+  }
+  
+  .mentors__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mentor-card__image-wrapper {
+    height: 300px;
+  }
+}
