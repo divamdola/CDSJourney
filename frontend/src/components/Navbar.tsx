@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,7 +75,7 @@ const Navbar = () => {
       <div className="container navbar__container">
         <Link to="/" className="navbar__logo">
           <img 
-            src="/src/assets/logo.svg" 
+            src={logo} 
             alt="CDSJourney Logo" 
             className="navbar__logo-image" 
             style={{ height: '60px', width: 'auto' }}

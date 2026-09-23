@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './FinalCTA.css';
+import chestImage from '../assets/chest.png';
 
 const FinalCTA = () => {
   const containerVariants = {
@@ -51,7 +52,7 @@ const FinalCTA = () => {
           <motion.div className="final-cta__visual" variants={itemVariants}>
             <div className="final-cta__image-wrapper">
               <img
-                src="/src/assets/chest.png"
+                src={chestImage}
                 alt="Defence aspirant"
                 className="final-cta__image"
               />

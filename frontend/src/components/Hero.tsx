@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import heroImage from '../assets/hero_wrapper-image.png';
 
 const Hero = () => {
   const containerVariants = {
@@ -116,7 +117,7 @@ const Hero = () => {
         >
           <div className="hero__image-wrapper">
             <img
-              src="/src/assets/hero_wrapper-image.png"
+              src={heroImage}
               alt="Hero image"
               className="hero__image"
             />

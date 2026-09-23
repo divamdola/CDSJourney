@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import logo from '../assets/logo.svg';
+import twitterIcon from '../assets/twitter-round-svgrepo-com.svg';
+import linkedinIcon from '../assets/linkedin-round-svgrepo-com.svg';
+import instagramIcon from '../assets/instagram-round-svgrepo-com.svg';
+import youtubeIcon from '../assets/youtube-color-svgrepo-com.svg';
+import telegramIcon from '../assets/telegram-svgrepo-com.svg';
 
 const Footer = () => {
   const footerLinks = {
@@ -33,7 +39,7 @@ const Footer = () => {
           <div className="footer__brand">
             <Link to="/" className="footer__logo">
               <img
-                src="/src/assets/logo.svg"
+                src={logo}
                 alt="CDSJourney Logo"
                 className="footer__logo-image"
               />
@@ -43,19 +49,19 @@ const Footer = () => {
             </p>
             <div className="footer__social">
               <a href="#" aria-label="Twitter" className="footer__social-link">
-                <img src="/src/assets/twitter-round-svgrepo-com.svg" alt="Twitter" />
+                <img src={twitterIcon} alt="Twitter" />
               </a>
               <a href="#" aria-label="LinkedIn" className="footer__social-link">
-                <img src="/src/assets/linkedin-round-svgrepo-com.svg" alt="LinkedIn" />
+                <img src={linkedinIcon} alt="LinkedIn" />
               </a>
               <a href="#" aria-label="Instagram" className="footer__social-link">
-                <img src="/src/assets/instagram-round-svgrepo-com.svg" alt="Instagram" />
+                <img src={instagramIcon} alt="Instagram" />
               </a>
               <a href="#" aria-label="YouTube" className="footer__social-link">
-                <img src="/src/assets/youtube-color-svgrepo-com.svg" alt="YouTube" />
+                <img src={youtubeIcon} alt="YouTube" />
               </a>
               <a href="#" aria-label="Telegram" className="footer__social-link">
-                <img src="/src/assets/telegram-svgrepo-com.svg" alt="Telegram" />
+                <img src={telegramIcon} alt="Telegram" />
               </a>
             </div>
           </div>
